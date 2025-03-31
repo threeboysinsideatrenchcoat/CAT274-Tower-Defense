@@ -103,6 +103,9 @@ MonoBehaviour:
   characterName: Tower
   health: 0
   displayHealth: {fileID: 1139583347278647366}
+  projectile: {fileID: 7155539728985728143, guid: 07eda9c0556fcbb45801e503b4198d5b, type: 3}
+  spawnTimer: 0
+  spawnInterval: 1
 --- !u!61 &9156226079052117676
 BoxCollider2D:
   m_ObjectHideFlags: 0
