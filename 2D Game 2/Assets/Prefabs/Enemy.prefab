@@ -364,11 +364,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  health: 0
+  health: 10
   displayHealth: {fileID: 7179617470728744913}
   speed: 0
-  xSpeed: 0
-  ySpeed: 0
+  xSpeed: 0.02
+  ySpeed: 0.05
   thisObject: {fileID: 4771013147627994842}
   xDir: 0
   yDir: 0

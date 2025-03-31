@@ -17,12 +17,12 @@ public class TargetEnemy : Enemy
     {
         DisplayHealth();
         manager = FindObjectOfType<GameManager>();
-        thisObject.transform.position += VectorToTower() + speed; 
+        thisObject.transform.position += VectorToTower() * speed; 
     }
 
     Vector3 VectorToTower()
     {
-        Vector3 targetDirecton;
+        Vector3 targetDirection;
         targetDirection = targetTower.transform.position - transform.position; 
         targetDirection = targetDirection.normalized; 
 
