@@ -19,10 +19,10 @@ public class Tower : CharacterBase
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("colliding with enemy");
-            health = health - 10;
+            Debug.Log("colliding with player");
+            health = health - 3;
             Destroy (collision.gameObject);
         }
     }
