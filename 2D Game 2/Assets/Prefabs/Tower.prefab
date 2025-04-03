@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6827758678952650690}
   m_Layer: 0
   m_Name: Tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,9 +29,9 @@ Transform:
   m_GameObject: {fileID: 1629858496234248591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: -0.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.03, y: -0.05, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3291162792147325791}
   m_Father: {fileID: 0}
@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 0.4339623, g: 0.34594163, b: 0.34594163, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5e3b32641e48cc245b2ac45aa2b5a1d3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.8828125}
+  m_Size: {x: 0.4, y: 0.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,11 +101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Tower
-  health: 0
+  health: 50
   displayHealth: {fileID: 1139583347278647366}
-  projectile: {fileID: 7155539728985728143, guid: 07eda9c0556fcbb45801e503b4198d5b, type: 3}
+  projectile: {fileID: 6969559736708501582, guid: 28325e18e4efc4641b89c495d4ab06fd, type: 3}
   spawnTimer: 0
-  spawnInterval: 1
+  spawnInterval: 0.1
 --- !u!61 &9156226079052117676
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,14 +142,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
-    newSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 0.4, y: 0.4}
+    newSize: {x: 0.4, y: 0.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.8828125}
+  m_Size: {x: 0.4, y: 0.4}
   m_EdgeRadius: 0
 --- !u!50 &6827758678952650690
 Rigidbody2D:
@@ -206,7 +206,7 @@ RectTransform:
   m_GameObject: {fileID: 2012291617333541271}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0066268253, y: 0.0066268253, z: 0.0066268253}
+  m_LocalScale: {x: 0.00221, y: 0.00221, z: 0.00221}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8807054765109468091}
@@ -214,7 +214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.25, y: 0.8}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1177, y: 530}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3474010524593920122
@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 8807054765109468091}
   - component: {fileID: 3598448713839212323}
   - component: {fileID: 1139583347278647366}
+  - component: {fileID: 8783411452145159666}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -314,7 +315,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 160, y: -5}
+  m_AnchoredPosition: {x: 118, y: 142}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1.0764153, y: 1.4082904}
 --- !u!222 &3598448713839212323
@@ -414,3 +415,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8783411452145159666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5434624158584270879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c725a4e9d1e1414e9f0dd18efa37853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: 
+  health: 50
+  displayHealth: {fileID: 1139583347278647366}

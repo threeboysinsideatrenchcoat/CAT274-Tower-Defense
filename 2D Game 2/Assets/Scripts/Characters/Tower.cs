@@ -21,9 +21,16 @@ public class Tower : CharacterBase
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("colliding with player");
+            Debug.Log("colliding with Player");
             health = health - 3;
             Destroy (collision.gameObject);
         }
+        if (collision.gameObject.tag == "BlobProjectile")
+        {
+            Debug.Log("colliding with BlobProjectile");
+            health = health - 9;
+            Destroy (collision.gameObject);
+        }
+        
     }
 }
