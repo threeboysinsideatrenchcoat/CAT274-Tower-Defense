@@ -24,4 +24,13 @@ public class YellowProjectile : BaseProjectile
 
         return targetDirection; 
     }
+
+        void OnTriggerEnter2D (Collider2D other)
+    {
+        if(other.gameObject.tag == "Shield")
+        {
+            Debug.Log("Deleted bullet");
+            Destroy(gameObject);
+        }
+    }
 }

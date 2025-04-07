@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CharacterMovement : CharacterBase
 {
@@ -84,12 +85,15 @@ public class CharacterMovement : CharacterBase
             health = health - 5; 
             
         }
-        if(other.gameObject.tag == "Projectile2")
+        if(isShield == false && other.gameObject.tag == "Projectile2")
         {
             health = health - 2; 
             Destroy(other.gameObject);
         }
-        
+        else if(isShield == true && other.gameObject.tag == "Projectile2")
+        {
+            Destroy(other.gameObject);
+        }
     }
 
 
