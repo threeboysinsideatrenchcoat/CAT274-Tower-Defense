@@ -105,7 +105,7 @@ MonoBehaviour:
   displayHealth: {fileID: 1139583347278647366}
   projectile: {fileID: 6969559736708501582, guid: 28325e18e4efc4641b89c495d4ab06fd, type: 3}
   spawnTimer: 0
-  spawnInterval: 0.1
+  spawnInterval: 2.5
 --- !u!61 &9156226079052117676
 BoxCollider2D:
   m_ObjectHideFlags: 0

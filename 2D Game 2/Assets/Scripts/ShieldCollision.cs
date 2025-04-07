@@ -16,11 +16,12 @@ public class ShieldCollision : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D (Collision2D collision)
+    void OnTriggerEnter2D (Collider2D other)
     {
-        if(collision.gameObject.tag == "Projectile")
+        if(other.gameObject.tag == "Projectile2")
         {
-            Destroy(collision.gameObject);
+            Debug.Log("Deleted bullet");
+            Destroy(other.gameObject);
         }
     }
 }

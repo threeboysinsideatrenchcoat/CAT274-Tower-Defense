@@ -8,8 +8,10 @@ public class Tower : CharacterBase
     public float spawnTimer = 0f; 
     public float spawnInterval = 0.5f;
     Vector3 spawnPosition; 
-    private void Update()
+    void Update()
     {
+        Health();
+        DisplayHealth();
         spawnTimer += Time.deltaTime; 
         if (spawnTimer >= spawnInterval)
         {
@@ -23,14 +25,18 @@ public class Tower : CharacterBase
         {
             Debug.Log("colliding with Player");
             health = health - 3;
-            Destroy (collision.gameObject);
+            Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "BlobProjectile")
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "BlobProjectile")
         {
-            Debug.Log("colliding with BlobProjectile");
+            Debug.Log("Triggered blob projectile");
             health = health - 9;
-            Destroy (collision.gameObject);
+            Destroy(other.gameObject);
         }
-        
     }
 }

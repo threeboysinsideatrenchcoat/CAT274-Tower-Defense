@@ -17,11 +17,20 @@ public class CharacterBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       DisplayHealth();
+        Health();
+        DisplayHealth();
     }
 
     public void DisplayHealth()
     {
         displayHealth.text = "Health: " + health; 
+    }
+
+    public void Health()
+    {
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -26,6 +26,9 @@ public class CharacterMovement : CharacterBase
  
     void Update()
     {   
+        Health();
+        DisplayHealth();
+        
         shieldTime += Time.deltaTime;
         if (Input.GetKey(KeyCode.W))
         {
@@ -53,8 +56,9 @@ public class CharacterMovement : CharacterBase
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(projectile, transform.position, Quaternion.identity); 
-        Debug.Log("Left Mouse Button Clicked");
+            Debug.Log("Left Mouse Button Clicked");
         }
+
         if (Input.GetKey(KeyCode.Space))
         {
             if(isShield == false)
@@ -71,16 +75,19 @@ public class CharacterMovement : CharacterBase
             isShield = false;
             shieldTime = 0f;
         }
+        
     }
-    void OnCollisionEnter2D(Collision2D collison)
+    void OnTriggerEnter2D(Collider2D other)
     { 
-        if(collison.gameObject.tag == "Projectile")
-        {
-            health = health - 2; 
-        }
-        if(collison.gameObject.tag == "Projectile2")
+        if(other.gameObject.tag == "Projectile")
         {
             health = health - 5; 
+            
+        }
+        if(other.gameObject.tag == "Projectile2")
+        {
+            health = health - 2; 
+            Destroy(other.gameObject);
         }
         
     }
