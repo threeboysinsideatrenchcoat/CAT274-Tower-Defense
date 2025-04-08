@@ -36,8 +36,8 @@ public class Tower : CharacterBase
         if (other.gameObject.tag == "BlobProjectile")
         {
             Debug.Log("Triggered blob projectile");
-            health = health - 9;
-            Destroy(other.gameObject);
+           // health = health - 5;
+           // Destroy(other.gameObject);
         }
     }
 }

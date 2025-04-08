@@ -18,11 +18,17 @@ public class YellowProjectile : BaseProjectile
     }
      Vector3 VectorToPlayer()
     {
-        Vector3 targetDirection;
-        targetDirection = targetPlayer.transform.position - transform.position; 
-        targetDirection = targetDirection.normalized; 
+
+        if(targetPlayer != null)
+        {
+            Vector3 targetDirection;
+            targetDirection = targetPlayer.transform.position - transform.position; 
+            targetDirection = targetDirection.normalized; 
 
         return targetDirection; 
+        }
+
+        return new Vector3(0,0,0); 
     }
 
         void OnTriggerEnter2D (Collider2D other)

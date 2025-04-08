@@ -5,16 +5,25 @@ using UnityEngine;
 public class BlueProjectile : BaseProjectile
 {
     public GameObject targetTower; 
+
+    public bool canHit = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
         targetTower = GameObject.FindWithTag("Tower");
+         canHit = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        thisObject.transform.position += VectorToTower() * speed; 
+        if(targetTower)
+        {
+        thisObject.transform.position += VectorToTower() * speed;
+         }
+
     }
      Vector3 VectorToTower()
     {
@@ -23,5 +32,19 @@ public class BlueProjectile : BaseProjectile
         targetDirection = targetDirection.normalized; 
 
         return targetDirection; 
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+
+         Debug.Log(" any hit");
+
+        if (other.gameObject.tag == "Tower" && canHit)
+        {
+            Debug.Log("hit");
+            canHit = false;
+            other.gameObject.GetComponent<CharacterBase>().health -= 5;
+            Destroy(gameObject);
+        }
     }
 }

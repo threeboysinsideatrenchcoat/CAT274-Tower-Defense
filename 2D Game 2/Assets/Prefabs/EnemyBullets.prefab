@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6022458783766322946}
   - component: {fileID: 7857622198273345916}
   - component: {fileID: -6791416323937274190}
+  - component: {fileID: -6659070456226034472}
   m_Layer: 0
   m_Name: EnemyBullets
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,3 +139,15 @@ PolygonCollider2D:
       - {x: 0.14, y: 0.14999999}
       - {x: 0.12, y: 0.16}
   m_UseDelaunayMesh: 0
+--- !u!114 &-6659070456226034472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340736690155286071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6314ee4f0f3a51346be5fd0ac0019ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

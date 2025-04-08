@@ -52,8 +52,8 @@ public class Enemy : CharacterBase
     {
         if (other.tag == "Projectile")
         {
-            health = health - 5; 
-            Destroy(other.gameObject);
+          //  health = health - 5; 
+           // Destroy(other.gameObject);
         }
     }
 }
